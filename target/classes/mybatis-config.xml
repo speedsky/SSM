@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!--驼峰式命名支持 -->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	<!-- bean支持别名 -->
+	<typeAliases>
+		<package name="com.bestlove.crud.bean" />
+	</typeAliases>
+	<!-- 注册mybatis分页插件  -->
+	<plugins>
+    <!-- com.github.pagehelper为PageHelper类所在包名 -->
+    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        <!-- 使用下面的方式配置参数，后面会有所有的参数介绍 -->
+        <property name="reasonable" value="true"/><!--分页参数合理化  -->
+	</plugin>
+</plugins>
+</configuration>
